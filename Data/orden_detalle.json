@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5b46821468999103ac781c19"},"orden":{"$oid":"5b46821368999103ac781c17"},"producto":{"$oid":"5b2d87e4864fcb1b35b9aa48"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b46821468999103ac781c1a"},"orden":{"$oid":"5b46821368999103ac781c17"},"producto":{"$oid":"5b2d87e4864fcb1b35b9aa4d"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b46821468999103ac781c18"},"orden":{"$oid":"5b46821368999103ac781c17"},"producto":{"$oid":"5b2d87e4864fcb1b35b9aa83"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b468523ed6b8a26cce5dce0"},"orden":{"$oid":"5b468522ed6b8a26cce5dcdf"},"producto":{"$oid":"5b2d87e4864fcb1b35b9aa83"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b468523ed6b8a26cce5dce2"},"orden":{"$oid":"5b468522ed6b8a26cce5dcdf"},"producto":{"$oid":"5b2d87e4864fcb1b35b9aa4d"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b468523ed6b8a26cce5dce1"},"orden":{"$oid":"5b468522ed6b8a26cce5dcdf"},"producto":{"$oid":"5b2d87e4864fcb1b35b9aa48"},"__v":{"$numberInt":"0"}}

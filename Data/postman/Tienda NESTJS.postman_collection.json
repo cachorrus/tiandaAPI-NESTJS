@@ -1,0 +1,521 @@
+{
+	"info": {
+		"_postman_id": "22e28064-41af-4a1a-a9b9-2e552ee4610d",
+		"name": "Tienda NESTJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Linea",
+			"description": null,
+			"item": [
+				{
+					"name": "Crear Linea",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "linea",
+									"value": "Trains",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "icono",
+									"value": "trains",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "fdsf",
+									"value": "444",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/lineas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lineas"
+							]
+						},
+						"description": "body:{\n\tlinea: string\n\ticono: string\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Listado de lineas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjQzYTFmYTc5ZDFmMzE1NTBiMWFhZDkiLCJjb3JyZW8iOiJjYWNob3JydXNAbWFyaW8uY29tIiwiaWF0IjoxNTMxMzI4NjM3LCJleHAiOjE1MzEzNzE4Mzd9.kokQM_9NIi38C4-_ZrjPOx4Rx58XeWoU6DvZjBam_Yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/lineas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lineas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"description": null,
+			"item": [
+				{
+					"name": "Listado de productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjQzYTFmYTc5ZDFmMzE1NTBiMWFhZDkiLCJjb3JyZW8iOiJjYWNob3JydXNAbWFyaW8uY29tIiwiaWF0IjoxNTMxMTU5NzE4LCJleHAiOjE1MzEyMDI5MTh9.WQU1-t8kiM1Eti_9jzjXu3zHsb7WsIB1ZnNgJIGYPeY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/productos/list/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"list",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear Producto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0854e6cc-9aa6-4b67-b76e-105c089198b8",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "codigo",
+									"value": "S10_1678",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "producto",
+									"value": "1969 Harley Davidson Ultimate Chopper",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "linea",
+									"value": "5b2d5ec5fb5a32361466a619",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "proveedor",
+									"value": "Min Lin Diecast",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "This replica features working kickstand, front suspension, gear-shift lever, footbrake lever, drive chain, wheels and steering. All parts are particularly delicate due to their precise scale and require special care and attention.",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "precioCompra",
+									"value": "48810.00",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos"
+							]
+						},
+						"description": "{\n\tcodigo: string,\n\tproducto: string,\n\tlinea: string, //referencia al catalogo de lineas\n\tproveedor: string,\n\tdescripcion: string,\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Listado de productos por Id Linea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjQzYTFmYTc5ZDFmMzE1NTBiMWFhZDkiLCJjb3JyZW8iOiJjYWNob3JydXNAbWFyaW8uY29tIiwiaWF0IjoxNTMxMzI4NjM3LCJleHAiOjE1MzEzNzE4Mzd9.kokQM_9NIi38C4-_ZrjPOx4Rx58XeWoU6DvZjBam_Yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/productos/porTipo/5b2d5dfda7e18211408f8a1b/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"porTipo",
+								"5b2d5dfda7e18211408f8a1b",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar producto ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjQzYTFmYTc5ZDFmMzE1NTBiMWFhZDkiLCJjb3JyZW8iOiJjYWNob3JydXNAbWFyaW8uY29tIiwiaWF0IjoxNTMxMzI4NjM3LCJleHAiOjE1MzEzNzE4Mzd9.kokQM_9NIi38C4-_ZrjPOx4Rx58XeWoU6DvZjBam_Yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/productos/buscar/ford model",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"buscar",
+								"ford model"
+							]
+						},
+						"description": "por nombre"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"description": null,
+			"item": [
+				{
+					"name": "Registrar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "correo",
+									"value": "cachorrus2@mario.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "correo",
+									"value": "cachorrus@mario.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orden",
+			"description": null,
+			"item": [
+				{
+					"name": "realizarOrden",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjQzYTFmYTc5ZDFmMzE1NTBiMWFhZDkiLCJjb3JyZW8iOiJjYWNob3JydXNAbWFyaW8uY29tIiwiaWF0IjoxNTMxMzI4NjM3LCJleHAiOjE1MzEzNzE4Mzd9.kokQM_9NIi38C4-_ZrjPOx4Rx58XeWoU6DvZjBam_Yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "items",
+									"value": "5b2d87e4864fcb1b35b9aa83,5b2d87e4864fcb1b35b9aa48,5b2d87e4864fcb1b35b9aa4d",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "items",
+									"value": "",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/ordenes/realizarOrden",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ordenes",
+								"realizarOrden"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orden por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjQzYTFmYTc5ZDFmMzE1NTBiMWFhZDkiLCJjb3JyZW8iOiJjYWNob3JydXNAbWFyaW8uY29tIiwiaWF0IjoxNTMxMzI4NjM3LCJleHAiOjE1MzEzNzE4Mzd9.kokQM_9NIi38C4-_ZrjPOx4Rx58XeWoU6DvZjBam_Yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/ordenes/orden/5b463888e9c2481c04a1cd20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ordenes",
+								"orden",
+								"5b463888e9c2481c04a1cd20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ordenes por usuarioId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjQzYTFmYTc5ZDFmMzE1NTBiMWFhZDkiLCJjb3JyZW8iOiJjYWNob3JydXNAbWFyaW8uY29tIiwiaWF0IjoxNTMxMzI4NjM3LCJleHAiOjE1MzEzNzE4Mzd9.kokQM_9NIi38C4-_ZrjPOx4Rx58XeWoU6DvZjBam_Yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/ordenes/usuario/5b43a1fa79d1f31550b1aad9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ordenes",
+								"usuario",
+								"5b43a1fa79d1f31550b1aad9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar orden",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjQzYTFmYTc5ZDFmMzE1NTBiMWFhZDkiLCJjb3JyZW8iOiJjYWNob3JydXNAbWFyaW8uY29tIiwiaWF0IjoxNTMxMzI4NjM3LCJleHAiOjE1MzEzNzE4Mzd9.kokQM_9NIi38C4-_ZrjPOx4Rx58XeWoU6DvZjBam_Yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/ordenes/borrar/5b467c9d079d48210067ec45",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ordenes",
+								"borrar",
+								"5b467c9d079d48210067ec45"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

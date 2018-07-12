@@ -1,0 +1,7 @@
+{"_id":{"$oid":"5b2d5dfda7e18211408f8a1b"},"linea":"Classic Cars","icono":"car","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b2d5ec5fb5a32361466a619"},"linea":"Motorcycles","icono":"bicycle","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b2d5f04fb5a32361466a61a"},"linea":"Planes","icono":"plane","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b2d5f0efb5a32361466a61b"},"linea":"Ships","icono":"boat","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b2d5f1afb5a32361466a61c"},"linea":"Trucks and Buses","icono":"bus","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b2d5f62fb5a32361466a61d"},"linea":"Vintage Cars","icono":"pricetags","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5b2d5f6ffb5a32361466a61e"},"linea":"Trains","icono":"train","__v":{"$numberInt":"0"}}
