@@ -5,6 +5,7 @@ import { Payload } from 'auth/decorators/Payload.decorator';
 import { AuthGuard } from '@nestjs/passport';
 import { CreateOrdenDto } from './dto/createOrden.dto';
 import { OrdenesService } from './ordenes.service';
+import { Orden } from './interfaces/orden.interface';
 
 @Controller('ordenes')
 @UseInterceptors(TransformInterceptor)
@@ -14,7 +15,7 @@ export class OrdenesController {
     constructor( private _ordenService: OrdenesService) {}
 
     @Post('/realizarOrden')
-    async realizarOrden(@Payload() payload: JwtPayload, @Body() body: CreateOrdenDto) {
+    async realizarOrden(@Payload() payload: JwtPayload, @Body() body: CreateOrdenDto): Promise<Orden> {
         // console.log(JSON.stringify(body));
         if (!(body && body.items && body.items.trim().length > 0)) {
             throw new HttpException('Faltan los productos de la orden', HttpStatus.BAD_REQUEST);
@@ -26,12 +27,12 @@ export class OrdenesController {
     }
 
     @Get('/orden/:ordenId')
-    async obtenerOrdenPorId(@Param() params) {
+    async obtenerOrdenPorId(@Param() params): Promise<Orden> {
         return await this._ordenService.findById(params.ordenId);
     }
 
     @Get('/usuario/:usuarioId')
-    async obtenerOrdenesPorUsuarioId(@Param() params) {
+    async obtenerOrdenesPorUsuarioId(@Param() params): Promise<Orden[]> {
         return await this._ordenService.findByUsuarioId(params.usuarioId);
     }
 

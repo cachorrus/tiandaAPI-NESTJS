@@ -9,6 +9,6 @@ import { createParamDecorator } from '@nestjs/common';
  * }
  */
 
-export const Payload = createParamDecorator((data, req) => {
+export const Payload: any = createParamDecorator((data, req) => {
     return req.user;
 });

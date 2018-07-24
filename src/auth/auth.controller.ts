@@ -3,6 +3,7 @@ import { AuthService } from './auth.service';
 import { CreateUsuarioDTO } from 'usuarios/dto/create-usuario.dto';
 import { UsuariosService } from 'usuarios/usuarios.service';
 import { TransformInterceptor } from 'common/interceptors/transform.interceptor';
+import { Usuario } from 'usuarios/interfaces/usuario.interface';
 
 @Controller('auth')
 @UseInterceptors(TransformInterceptor)
@@ -31,7 +32,7 @@ export class AuthController {
     }
 
     @Post('register')
-    async registerUser(@Body() body: CreateUsuarioDTO) {
+    async registerUser(@Body() body: CreateUsuarioDTO): Promise<Usuario> {
         if (!(body && body.correo && body.password)) {
             throw new HttpException('Correo y password son requeridos', HttpStatus.BAD_REQUEST);
         }
