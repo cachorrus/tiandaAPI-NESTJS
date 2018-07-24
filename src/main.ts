@@ -54,6 +54,11 @@ async function bootstrap() {
   //   next();
   // });
 
-  await app.listen(3000);
+  const PORT = process.env.PORT || 3000;
+
+  await app.listen(PORT).then( () => {
+    // tslint:disable-next-line:no-console
+    console.log('app corriendo en el puerto: ' + PORT);
+  });
 }
 bootstrap();
