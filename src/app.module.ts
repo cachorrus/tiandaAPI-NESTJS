@@ -10,7 +10,7 @@ import { OrdenesModule } from './ordenes/ordenes.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/tienda'),
+    MongooseModule.forRoot('mongodb://user:user123@ds249311.mlab.com:49311/tienda_nestjs'), // ('mongodb://localhost:27017/tienda'),
     ProductosModule,
     LineasModule,
     UsuariosModule,
