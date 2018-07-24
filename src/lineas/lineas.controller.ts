@@ -9,7 +9,6 @@ import { Payload } from 'auth/decorators/Payload.decorator';
 
 @Controller('lineas')
 @UseInterceptors(TransformInterceptor)
-@UseGuards(AuthGuard('jwt'))
 export class LineasController {
 
     constructor(private readonly lineasService: LineasService) {}
@@ -19,12 +18,13 @@ export class LineasController {
         return this.lineasService.findAll();
     }
 
-    @Get('request')
+    @Get('request') // test jwtpayload
     async request(@Payload() jwtPayload: JwtPayload) {
         return await jwtPayload;
     }
 
     @Post()
+    @UseGuards(AuthGuard('jwt'))
     // @UsePipes( new ValidationPipe())
     async create(@Body() createLineaDto: CrearLineaDto) {
      return this.lineasService.create(createLineaDto);

@@ -29,6 +29,7 @@
     "bcrypt": "^3.0.0",
     "class-transformer": "^0.1.9",
     "class-validator": "^0.8.5",
+    "cors": "^2.8.4",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.1.6",
     "passport": "^0.4.0",
@@ -72,5 +73,9 @@
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "coverageDirectory": "../coverage"
+  },
+  "engines": {
+    "node": "9.5.0",
+    "npm": "5.6.0"
   }
 }

@@ -15,7 +15,7 @@ export class OrdenesController {
 
     @Post('/realizarOrden')
     async realizarOrden(@Payload() payload: JwtPayload, @Body() body: CreateOrdenDto) {
-
+        // console.log(JSON.stringify(body));
         if (!(body && body.items && body.items.trim().length > 0)) {
             throw new HttpException('Faltan los productos de la orden', HttpStatus.BAD_REQUEST);
         }

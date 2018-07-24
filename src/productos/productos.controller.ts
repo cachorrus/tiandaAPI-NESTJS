@@ -7,11 +7,11 @@ import { TransformInterceptor } from 'common/interceptors/transform.interceptor'
 
 @Controller('productos')
 @UseInterceptors(TransformInterceptor)
-@UseGuards(AuthGuard('jwt'))
 export class ProductosController {
   constructor(private readonly productosService: ProductosService) {}
 
   @Post()
+  @UseGuards(AuthGuard('jwt'))
   async create(@Body() createProductoDto: CreateProductoDto) {
    return this.productosService.create(createProductoDto);
   }
