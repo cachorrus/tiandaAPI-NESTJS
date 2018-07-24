@@ -3,9 +3,9 @@ import { Controller, Get, Post, Body, UseInterceptors, UsePipes, ValidationPipe,
 import { LineasService } from './lineas.service';
 import { Linea } from './interfaces/linea.interface';
 import { CrearLineaDto } from './dto/crearLineaDto.dto';
-import { TransformInterceptor } from 'common/interceptors/transform.interceptor';
-import { JwtPayload } from 'auth/interfaces/jwtPayload.interface';
-import { Payload } from 'auth/decorators/Payload.decorator';
+import { TransformInterceptor } from '../common/interceptors/transform.interceptor';
+import { JwtPayload } from '../auth/interfaces/jwtPayload.interface';
+import { Payload } from '../auth/decorators/Payload.decorator';
 
 @Controller('lineas')
 @UseInterceptors(TransformInterceptor)

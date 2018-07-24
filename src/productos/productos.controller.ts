@@ -3,7 +3,7 @@ import { Controller, Get, Post, Body, Param, UseInterceptors, UseGuards } from '
 import { CreateProductoDto } from './dto/create-producto.dto';
 import { ProductosService } from './productos.service';
 import { Producto } from './interfaces/producto.interface';
-import { TransformInterceptor } from 'common/interceptors/transform.interceptor';
+import { TransformInterceptor } from '../common/interceptors/transform.interceptor';
 
 @Controller('productos')
 @UseInterceptors(TransformInterceptor)

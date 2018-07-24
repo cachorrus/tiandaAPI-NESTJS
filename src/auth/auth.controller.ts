@@ -1,9 +1,9 @@
 import { Controller, Post, Body, HttpException, HttpStatus, UseInterceptors } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { CreateUsuarioDTO } from 'usuarios/dto/create-usuario.dto';
-import { UsuariosService } from 'usuarios/usuarios.service';
-import { TransformInterceptor } from 'common/interceptors/transform.interceptor';
-import { Usuario } from 'usuarios/interfaces/usuario.interface';
+import { TransformInterceptor } from '../common/interceptors/transform.interceptor';
+import { UsuariosService } from '../usuarios/usuarios.service';
+import { CreateUsuarioDTO } from '../usuarios/dto/create-usuario.dto';
+import { Usuario } from '../usuarios/interfaces/usuario.interface';
 
 @Controller('auth')
 @UseInterceptors(TransformInterceptor)

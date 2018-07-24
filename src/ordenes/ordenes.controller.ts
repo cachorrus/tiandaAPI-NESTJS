@@ -1,11 +1,11 @@
-import {TransformInterceptor} from 'common/interceptors/transform.interceptor';
 import { Controller, Post, Body, UseGuards, UseInterceptors, HttpException, HttpStatus, Get, Param, Delete } from '@nestjs/common';
-import { JwtPayload } from 'auth/interfaces/jwtPayload.interface';
-import { Payload } from 'auth/decorators/Payload.decorator';
 import { AuthGuard } from '@nestjs/passport';
 import { CreateOrdenDto } from './dto/createOrden.dto';
 import { OrdenesService } from './ordenes.service';
 import { Orden } from './interfaces/orden.interface';
+import { TransformInterceptor } from '../common/interceptors/transform.interceptor';
+import { Payload } from '../auth/decorators/Payload.decorator';
+import { JwtPayload } from '../auth/interfaces/jwtPayload.interface';
 
 @Controller('ordenes')
 @UseInterceptors(TransformInterceptor)

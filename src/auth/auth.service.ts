@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { UsuariosService } from 'usuarios/usuarios.service';
-import { SECRET_OR_KEY } from 'constantes';
 import * as jwt from 'jsonwebtoken';
 import { JwtPayload } from './interfaces/jwtPayload.interface';
+import { UsuariosService } from '../usuarios/usuarios.service';
+import { SECRET_OR_KEY } from '../constantes';
 
 @Injectable()
 export class AuthService {
